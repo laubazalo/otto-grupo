@@ -1,0 +1,10 @@
+Para añadir archivos al área de pre commit: git add . 
+Para commitear archivos (para guardarlos): git commit -m "Mensaje"
+Para pushear (subir al repositorio): git push origin rama
+
+*Origin = nombre del repositorio 
+*Rama = en este caso es main
+
+Para cambiar de rama: git checkout nombreDeRama
+Para crear una rama nueva: git branch nombreNuevaRama
+Para descargar y actualizar archivos del repositorio: git pull origin nombreDeRama
