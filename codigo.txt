@@ -1,0 +1,26 @@
+#include "BluetoothSerial.h"
+
+#if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
+#error Bluetooth is not enabled! Please run 'make menuconfig' to and enable it
+#endif
+
+BluetoothSerial BTSerial;
+
+
+void setup() {
+  // put your setup code here, to run once:
+  BTSerial.begin("ESP32 simulacion"); //nombre para identificar el ESP32
+  Serial.begin(115200);
+  Serial.println("Hello, ESP32!");
+}
+
+void loop() {
+  if (Serial.available()) { //verifica si hay dato en la comunicación serial
+    BTSerial.write(Serial.read()); //envía por Bluetooth el dato existente
+  }
+  if (BTSerial.available()) { //verifica si hay dato en la comunicación serial
+    Serial.write(BTSerial.read()); //envía por serial el dato leído del Bluetooth
+  }
+  // put your main code here, to run repeatedly:
+  delay(20); // this speeds up the simulation
+}
