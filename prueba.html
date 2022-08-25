@@ -34,9 +34,6 @@
         overflow: hidden;
         background-color: #333;
         padding: 16px 16px;
-    }
-
-    .barra a { 
         display: block;
         color: #f2f2f2;
         font-family: 'Times New Roman';
@@ -45,11 +42,12 @@
         text-decoration: none;
     }
 
+
     body {
         margin: 0;
     }
 
-    .button { /*Estilo del botón para conexión Bluetooth*/
+    .botonBT { /*Estilo del botón para conexión Bluetooth*/
         background-color: #333; 
         border: 2px solid #f2f2f2;
         color: #f2f2f2;
@@ -61,18 +59,59 @@
         border-radius: 4px;
     }
 
-    #contenedor {
+    .botonManejo { /*Estilo del botón para conexión Bluetooth*/
+        background-color: lightslategray; 
+        border: 2px solid #f2f2f2;
+        color: #f2f2f2;
+        padding: 14px 14px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        border-radius: 4px;
+        width: 100px;
+    }
+
+    .botonManejoIzq { /*Estilo del botón para conexión Bluetooth*/
+        background-color: lightslategray; 
+        border: 2px solid #f2f2f2;
+        color: #f2f2f2;
+        padding: 14px 14px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        border-radius: 4px;
+        width: 100px;
+        float:left;
+    }
+
+    .botonManejoDer { /*Estilo del botón para conexión Bluetooth*/
+        background-color: lightslategray; 
+        border: 2px solid #f2f2f2;
+        color: #f2f2f2;
+        padding: 14px 14px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        border-radius: 4px;
+        width: 100px;
+        float:right;
+    }
+
+    #contenedor { /*Para dividir la parte central*/
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         padding: 10px;
     }
 
-    #colPrincipal { /*Columna principal*/
+    #colPrincipal { /*Columna principal que va a la derecha*/
         width: 70%;
     }
 
-    #colSecundaria { /*Columna secundaria*/
+    #colSecundaria { /*Columna secundaria que tiene la imagen de Otto*/
         width: 30%;
     }
 
@@ -103,7 +142,7 @@
 </div>
 
 <div class="barra">
-    <button class="button" onclick="run()">Conexión Bluetooth</button>
+    <button class="botonBT" onclick="run()">Conexión Bluetooth</button>
 </div>
 
 <div id="contenedor">
@@ -114,6 +153,19 @@
     </div>
     <div id="colPrincipal">
         <h1>¿Querés manejarlo?</h1>
+        <div style="text-align: center;">
+            <button class="botonManejo">⇑</button>
+        </div>
+        <div style="text-align: center;">
+            <button class="botonManejoIzq">⇐</button>
+            <button class="botonManejoDer">⇒</button>
+        </div>
+        <div style="text-align: center;">
+            <button class="botonManejo">♡</button>
+        </div>
+        <div style="text-align: center;">
+            <button class="botonManejo">⇓</button>
+        </div>
         <!--<p>Estamos probando</p>-->
     </div>
 </div>
