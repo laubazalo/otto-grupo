@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Robot Otto</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Los estilos-->
+<link rel="stylesheet" href="/style.css">
+<!--Los estilos-->
+
+<!--PWA-->
+<link rel="manifest" href="./manifest.json"> 
+<!---PWA--->
+
+<!--Metas de PWA, pongo lo que está en manifest.json-->
+<meta name="theme-color" content="lightblue">
+<meta name="MobileOptimized" content="width">
+<meta name="HandhelFriendly" content="true">
+<meta name="HandhelFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="shortcut icon" type="image/png" href="./imagenes/otto 512x512.png">
+<link rel="apple-touch-icon" href="./imagenes/otto 512x512.png">
+<link rel="apple-touch-startup-image" href="./imagenes/otto 512x512.png">
+
+<link rel="apple-touch-icon" href="./imagenes/otto 72x72.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 96x96.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 128x128.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 144x144.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 152x152.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 192x192.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 256x256.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 384x384.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 512x512.png" />
+
+<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+<!------------------------------------------------------------------------------>
+</head>
+
+<!--<script>
+    navigator.bluetooth.getAvailability()
+    .then(isBluetoothAvailable => {
+    log(`> Bluetooth is ${isBluetoothAvailable ? 'available' : 'unavailable'}`);
+    });
+
+    if ('onavailabilitychanged' in navigator.bluetooth) {
+        navigator.bluetooth.addEventListener('availabilitychanged', function(event) {
+        log(`> Bluetooth is ${event.value ? 'available' : 'unavailable'}`);
+    });
+}
+</script>-->
+
+<body>
+
+<div class="header">
+  <h1>Robot Otto</h1>
+</div>
+
+<div class="barra">
+    <button class="botonBT" onclick="run()">Conexión Bluetooth</button><!--Cuando toca el botón corre la función run()-->
+</div>
+</head>
+
+<div id="contenedor">
+    <div id="colSecundaria">
+        <h1>Él es Otto</h1>
+        <!--<p>Estamos probando</p>-->
+        <img src="./imagenes/otto (1).png" alt="Otto" style="width:70%">
+    </div>
+    <div id="colPrincipal">
+        <h1>¿Querés manejarlo?</h1>
+        <div style="text-align: center;">
+            <button class="botonManejo">⇑</button>
+        </div>
+        <div style="text-align: center;">
+            <button class="botonManejoIzq">⇐</button>
+            <button class="botonManejoDer">⇒</button>
+        </div>
+        <div style="text-align: center;">
+            <button class="botonManejo">♡</button>
+        </div>
+        <div style="text-align: center;">
+            <button class="botonManejo">⇓</button>
+        </div>
+        <!--<p>Estamos probando</p>-->
+    </div>
+</div>
+
+    <div class="pieDePag">
+        <p>Bazalo, Lautaro - Correa, Agostina - Depascual, Bianca</p>
+    </div>
+
+<script src="funciones.js"></script>
+<meta charset="utf-8">
+<script src="./regist_serviceWorker.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+{
+    "name": "Robot Otto",
+    "short_name": "RobotOtto",
+    "description": "PWS para manejar al robot Otto",
+    "theme_color":"lightblue", 
+    "background_color":"#333",
+    "display": "standalone", 
+    "orientation": "portrait", 
+    "scope":"./", 
+    "start_url": "prueba.html", 
+    "lang":"en", 
+    "icons": [
+        {
+            "src":"./imagenes/otto (1).png",
+            "sizes": "637x640",
+            "type":"image/png"
+        },
+
+        {
+            "src":"./imagenes/otto 72x72.png",
+            "sizes": "72x72",
+            "type":"image/png"
+        },
+
+        {
+            "src":"./imagenes/otto 96x96.png",
+            "sizes": "96x96",
+            "type":"image/png"
+        },
+
+        {
+            "src":"./imagenes/otto 128x128.png",
+            "sizes": "128x129",
+            "type":"image/png"
+        },
+
+        {
+            "src":"./imagenes/otto 144x144.png",
+            "sizes": "144x145",
+            "type":"image/png"
+        },
+
+        {
+            "src":"./imagenes/otto 152x152.png",
+            "sizes": "152x153",
+            "type":"image/png"
+        },
+
+        {
+            "src":"./imagenes/otto 192x192.png",
+            "sizes": "192x193",
+            "type":"image/png"
+        },
+
+        {
+            "src":"./imagenes/otto 256x256.png",
+            "sizes": "256x257",
+            "type":"image/png"
+        },
+
+        {
+            "src":"./imagenes/otto 384x384.png",
+            "sizes": "384x386",
+            "type":"image/png"
+        },
+
+        {
+            "src":"./imagenes/otto 512x512.png",
+            "sizes": "512x515",
+            "type":"image/png"
+        }
+    ]
+
+}
