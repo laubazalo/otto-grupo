@@ -10,8 +10,26 @@ function run(){
       // Attempts to connect to remote GATT Server.
       return device.gatt.connect();
     })
-    .then(server => { /* … */ })
-    .catch(error => { console.error(error); });
+    .then(() => 
+            {
+                console.log('connectToBluetoothDevice - Server GATT from "' + device.name + '"...');
+                // Set our event
+                connectDeviceAndCacheCharacteristic(device).
+                then(characteristic => startNotifications(characteristic)).
+                catch(error => display_info(error));
+            })
+    .then(characteristic =>{
+      characteristic.writeValueWithoutResponse('Hola');
+      console.log('Manda mensaje');
+    })
+    .catch(error => 
+    {
+        // Erreur pas de connexion
+        console.log(error);
+        
+    });
+
+  
 }
 
 
