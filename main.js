@@ -8,7 +8,7 @@ function eventClick() {
   
 // Call navigator.bluetooth.requestDevice
 navigator.bluetooth.requestDevice(options).then((device) => {
-  console.log(`Name: ${device.name}`);
+  alert(`Name: ${device.name}`);
   // Do something with the device.
   device.gatt.connect()
 })
