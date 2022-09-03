@@ -11,7 +11,7 @@ SoftwareSerial miBT(10, 11);
 int PINPIE1 = 2; 
 int PULSOMIN = 1300; //izquierdo
 int PULSOMAX = 2500; //izquierdo
-int comando = 90;
+uint8_t comando = 90;
 
 void setup() {
   // put your setup code here, to run once:
@@ -24,11 +24,12 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   if (miBT.available()) {   // if HM10 sends something then read
-    comando = miBT.parseInt();
+    comando = miBT.read();
     Serial.println(comando);
   }
-  
+  /*
   pie1.write(comando);
   delay(1000);
   comando = 90;
+  */
 }
