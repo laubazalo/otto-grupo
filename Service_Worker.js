@@ -4,7 +4,6 @@ urlsToCache = [
     './',
     './index.html', /*URL donde empieza a cargar la aplicación*/
     './style.css', /*llamo a los archivos para cuando cargue la aplicación*/
-    './css/home.css',
     './index.js',
     './regist_serviceWorker.js', 
     './imagenes/otto 72x72.png', /*cargo la imagen más pequeña*/
