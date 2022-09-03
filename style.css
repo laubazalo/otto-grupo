@@ -70,6 +70,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         padding: 10px;
+        justify-content: center;
     }
 
     #colPrincipal { /*Columna principal que va a la derecha*/
@@ -103,11 +104,24 @@
         flex-direction: row;
         flex-wrap: wrap;
         padding: 10px;
-        margin: 0;
+        justify-content: center;
     }
 
     #columna2 { /*Columnas*/
         width: 25%;
+        margin: 0px auto;
+        /*width: 50px;
+        height: 50px;*/
+        padding: 10px;
     }
+
+    .box{ /*Para centrar los botones dentro de las columnas generadas*/
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 5px;
+        justify-content: center;
+    }
+
 
     
