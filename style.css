@@ -59,38 +59,10 @@
         padding: 14px 14px;
         text-align: center;
         text-decoration: none;
-        display: inline-block;
-        font-size: 25px;
+        display: block;
+        font-size: 14px;
         border-radius: 4px;
         width: 100px;
-    }
-
-    .botonManejoIzq { /*Estilo del botón para conexión Bluetooth*/
-        background-color: lightslategray; 
-        border: 2px solid #f2f2f2;
-        color: #f2f2f2;
-        padding: 14px 14px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 25px;
-        border-radius: 4px;
-        width: 100px;
-        float:left;
-    }
-
-    .botonManejoDer { /*Estilo del botón para conexión Bluetooth*/
-        background-color: lightslategray; 
-        border: 2px solid #f2f2f2;
-        color: #f2f2f2;
-        padding: 14px 14px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 25px;
-        border-radius: 4px;
-        width: 100px;
-        float:right;
     }
 
     #contenedor { /*Para dividir la parte central*/
@@ -125,3 +97,17 @@
         margin-right: auto;
         object-fit: cover;
     }
+
+    #contenedor2 { /*Para dividir la parte de manejo del robot*/
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin: 0;
+    }
+
+    #columna2 { /*Columnas*/
+        width: 25%;
+    }
+
+    
