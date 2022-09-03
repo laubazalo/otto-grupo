@@ -7,7 +7,7 @@
     "display": "standalone", 
     "orientation": "portrait", 
     "scope":"./", 
-    "start_url": "prueba.html", 
+    "start_url": "index.html", 
     "lang":"en", 
     "icons": [
         {
