@@ -4,14 +4,14 @@
 //d0: RX
 //d1: TX
 //pie1: pin2
-
+//pierna Izq inicial: 90
 Servo pie1; 
 SoftwareSerial miBT(10, 11);
 
 int PINPIE1 = 2; 
-int PULSOMIN = 1000;
-int PULSOMAX = 2000;
-int comando = 0;
+int PULSOMIN = 1300; //izquierdo
+int PULSOMAX = 2500; //izquierdo
+int comando = 90;
 
 void setup() {
   // put your setup code here, to run once:
@@ -30,5 +30,5 @@ void loop() {
   
   pie1.write(comando);
   delay(1000);
-  comando = 0;
+  comando = 90;
 }
