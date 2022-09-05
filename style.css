@@ -1,13 +1,19 @@
     .header { /* Estilo del header */
-    background-color: lightslategray;
-    padding: 20px;
-    text-align: center;
+        background-color: lightslategray;
+        padding: 20px;
+        text-align: center;
     }
+
     h1 {
         color: #f2f2f2;
         text-align: center;
     }
     
+    h2 {
+        color: #f2f2f2;
+        text-align: center;
+        font-size: 25px;
+    }
 
     body { /* Estilo del fondo */
       background-color: lightblue;
@@ -81,30 +87,6 @@
         width: 30%;
     }
 
-    #contenedor2 { /*Para dividir la parte de manejo del robot*/
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 10px;
-        justify-content: center;
-    }
-
-    #columna2 { /*Columnas*/
-        width: 17,5%;
-        margin: 0px auto;
-        /*width: 50px;
-        height: 50px;*/
-        padding: 10px;
-    }
-
-    .box{ /*Para centrar los botones dentro de las columnas generadas*/
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 1px;
-        justify-content: space-between;
-    }
-
 /*---------------------------------PIE DE PAG. E IMAGEN---------------------------------*/
 
     footer { /*Pie de página*/
@@ -119,6 +101,7 @@
         box-sizing: border-box;
     }
 
+/*---------------------------------IMAGENES---------------------------------*/
     img { /*Para la foto del robot*/
         display: block;
         margin-left: auto;
