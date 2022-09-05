@@ -81,10 +81,6 @@
         width: 30%;
     }
 
-    *{
-        box-sizing: border-box;
-    }
-
     #contenedor2 { /*Para dividir la parte de manejo del robot*/
         display: flex;
         flex-direction: row;
@@ -119,11 +115,19 @@
         width: 100%;
     }
 
+    *{
+        box-sizing: border-box;
+    }
+
     img { /*Para la foto del robot*/
         display: block;
         margin-left: auto;
         margin-right: auto;
         object-fit: cover;
+    }
+
+    .box1 {
+        align-self: stretch;
     }
 
 /*---------------------------------REJILLAS PARA BOTONES---------------------------------*/
