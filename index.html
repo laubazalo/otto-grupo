@@ -21,6 +21,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+<link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+
+
 <link rel="shortcut icon" type="image/png" href="./imagenes/otto 512x512.png">
 <link rel="apple-touch-icon" href="./imagenes/otto 512x512.png">
 <link rel="apple-touch-startup-image" href="./imagenes/otto 512x512.png">
@@ -38,75 +41,60 @@
 <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
 <!------------------------------------------------------------------------------>
 </head>
-
-<!--<script>
-    navigator.bluetooth.getAvailability()
-    .then(isBluetoothAvailable => {
-    log(`> Bluetooth is ${isBluetoothAvailable ? 'available' : 'unavailable'}`);
-    });
-
-    if ('onavailabilitychanged' in navigator.bluetooth) {
-        navigator.bluetooth.addEventListener('availabilitychanged', function(event) {
-        log(`> Bluetooth is ${event.value ? 'available' : 'unavailable'}`);
-    });
-}
-</script>-->
-
 <body>
 
 <div class="header">
   <h1>Robot Otto</h1>
+
 </div>
 
 <div class="barra">
-    <button class="botonBT" >Conexión Bluetooth</button><!--Cuando toca el botón corre la función run()-->
+    <button class="botonBT">Conexión Bluetooth</button><!--Cuando toca el botón corre la función run()-->
 </div>
 </head>
 
 <div id="contenedor">
-    <div id="colSecundaria" class="box">
-        <h1>Él es Otto</h1>
-        <!--<p>Estamos probando</p>-->
-        <img src="./imagenes/otto (1).png" alt="Otto" width="100%" height="70%">
+    <div id="colSecundaria">
+        <h2>Él es Otto</h2>
+        <div class="box1"><img src="./imagenes/otto_rainbow.gif" alt="Otto" width="70%"></div>
     </div>
     <div id="colPrincipal">
-        <h1>¿Querés manejarlo?</h1>
-        <div id="contenedor2" class="mx-auto">
+        <h2>¿Querés manejarlo?</h2>
         <div id="columna2" class="box">
             <button class="botonManejo" style="margin: 10px">Caminar hacia adelante</button>
-            <button class="botonManejo" style="margin: 10px">Girar a la derecha</button>
-            <button class="botonManejo" style="margin: 10px">Girar a la izquierda</button>
-            <button class="botonManejo" style="margin: 10px">Levantar el pie</button>
-            <button class="botonManejo" style="margin: 10px">Caminata lunar</button>
+            <button class="botonManejo" style="margin: 10px">Cruzado</button>
+            <button class="botonManejo" style="margin: 10px">Feliz</button>
+            <button class="botonManejo" style="margin: 10px">Dormido</button>
+            <button class="botonManejo" style="margin: 10px">Fart</button>
         </div>
         <div id="columna2" class="box">
-            <button class="botonManejo" style="margin: 10px">Cruzado</button>
+            <button class="botonManejo" style="margin: 10px">Girar a la derecha</button>
             <button class="botonManejo" style="margin: 10px">Aleteo</button>
             <button class="botonManejo" style="margin: 10px">Swing</button>
             <button class="botonManejo" style="margin: 10px">Nervioso</button>
             <button class="botonManejo" style="margin: 10px">Arriba-Abajo</button>
         </div>
         <div id="columna2" class="box">
-            <button class="botonManejo" style="margin: 10px">Feliz</button>
+            <button class="botonManejo" style="margin: 10px">Girar a la izquierda</button>
             <button class="botonManejo" style="margin: 10px">Super feliz</button>
             <button class="botonManejo" style="margin: 10px">Triste</button>
             <button class="botonManejo" style="margin: 10px">Victorioso</button>
             <button class="botonManejo" style="margin: 10px">Enojado</button>
         </div>
         <div id="columna2" class="box">
-            <button class="botonManejo" style="margin: 10px">Dormido</button>
+            <button class="botonManejo" style="margin: 10px">Levantar el pie</button>
             <button class="botonManejo" style="margin: 10px">Amor</button>
             <button class="botonManejo" style="margin: 10px">Confundido</button>
-            <button class="botonManejo" style="margin: 10px">Fart</button>
+            <button class="botonManejo" style="margin: 10px">Caminata lunar</button>
             <button class="botonManejo" style="margin: 10px">Fail</button>
         </div>
         </div>
     </div>
 </div>
 
-    <div class="pieDePag">
-        <p>Bazalo, Lautaro - Correa, Agostina - Depascual, Bianca</p>
-    </div>
+<footer class="pieDePag">
+    <p>Bazalo, Lautaro - Correa, Agostina - Depascual, Bianca</p>
+</footer>
 
 <script src="funciones.js"></script>
 <meta charset="utf-8">
