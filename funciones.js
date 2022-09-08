@@ -46,7 +46,7 @@ class ClienteBluetooth {
 
 var cliente = new ClienteBluetooth();
 
-document.querySelector('button').addEventListener('click', async event => {
+document.getElementById('botonBT').addEventListener('click', async event => {
   try {
     await cliente.request();
     await cliente.connect();
