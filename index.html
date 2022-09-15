@@ -1,12 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>Robot Otto</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Los estilos-->
+<link rel="stylesheet" type="text/css"  href="style.css">
+<!--Los estilos-->
+
+<!--PWA!-->
+<link rel="manifest" href="./manifest.json"> 
+<!--PWA--->
+
+<!--Metas de PWA, pongo lo que está en manifest.json-->
+<meta name="theme-color" content="lightblue">
+<meta name="MobileOptimized" content="width">
+<meta name="HandhelFriendly" content="true">
+<meta name="HandhelFriendly" content="true">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+
+
+<link rel="shortcut icon" type="image/png" href="./imagenes/otto 512x512.png">
+<link rel="apple-touch-icon" href="./imagenes/otto 512x512.png">
+<link rel="apple-touch-startup-image" href="./imagenes/otto 512x512.png">
+
+<link rel="apple-touch-icon" href="./imagenes/otto 72x72.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 96x96.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 128x128.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 144x144.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 152x152.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 192x192.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 256x256.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 384x384.png" />
+<link rel="apple-touch-icon" href="./imagenes/otto 512x512.png" />
+
+<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+<!------------------------------------------------------------------------------>
 </head>
 <body>
-    <h1>Hola</h1>
+
+<div class="header">
+  <h1>Robot Otto</h1>
+
+</div>
+
+<div class="barra">
+    <button class="botonBT" id="botonBluetooth">Conexión Bluetooth</button><!--Cuando toca el botón corre la función run()-->
+</div>
+</head>
+
+<div id="contenedor">
+    <div id="colSecundaria">
+        <h2>Él es Otto</h2>
+        <div class="box1"><img src="./imagenes/otto_rainbow.gif" alt="Otto" width="70%"></div>
+    </div>
+    <div id="colPrincipal">
+        <h2>¿Querés manejarlo?</h2>
+        <div id="columna2" class="box">
+            <button class="botonManejo" style="margin: 10px">Caminar hacia adelante</button>
+            <button class="botonManejo" style="margin: 10px">Cruzado</button>
+            <button class="botonManejo" style="margin: 10px">Feliz</button>
+            <button class="botonManejo" style="margin: 10px">Dormido</button>
+            <button class="botonManejo" style="margin: 10px">Fart</button>
+        </div>
+        <div id="columna2" class="box">
+            <button class="botonManejo" style="margin: 10px">Girar a la derecha</button>
+            <button class="botonManejo" style="margin: 10px">Aleteo</button>
+            <button class="botonManejo" style="margin: 10px">Swing</button>
+            <button class="botonManejo" style="margin: 10px">Nervioso</button>
+            <button class="botonManejo" style="margin: 10px">Arriba-Abajo</button>
+        </div>
+        <div id="columna2" class="box">
+            <button class="botonManejo" style="margin: 10px">Girar a la izquierda</button>
+            <button class="botonManejo" style="margin: 10px">Super feliz</button>
+            <button class="botonManejo" style="margin: 10px">Triste</button>
+            <button class="botonManejo" style="margin: 10px">Victorioso</button>
+            <button class="botonManejo" style="margin: 10px">Enojado</button>
+        </div>
+        <div id="columna2" class="box">
+            <button class="botonManejo" style="margin: 10px">Levantar el pie</button>
+            <button class="botonManejo" style="margin: 10px">Amor</button>
+            <button class="botonManejo" style="margin: 10px">Confundido</button>
+            <button class="botonManejo" style="margin: 10px">Caminata lunar</button>
+            <button class="botonManejo" style="margin: 10px">Fail</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<footer class="pieDePag">
+    <p>Bazalo, Lautaro - Correa, Agostina - Depascual, Bianca</p>
+</footer>
+
+<script src="funciones.js"></script>
+<meta charset="utf-8">
+<script src="./regist_serviceWorker.js"></script>
+
+    
 </body>
 </html>

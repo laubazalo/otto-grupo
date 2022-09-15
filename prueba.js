@@ -19,7 +19,7 @@ function run(){
                 catch(error => display_info(error));
             })
     .then(characteristic =>{
-      characteristic.writeValueWithoutResponse('Hola');
+      characteristic.writeValueWithoutResponse('2');
       console.log('Manda mensaje');
     })
     .catch(error => 
