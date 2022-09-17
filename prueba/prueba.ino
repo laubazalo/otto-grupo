@@ -8,24 +8,44 @@
 Servo pie1; 
 SoftwareSerial miBT(10, 11);
 
+void prueba(){
+  Serial.println("Llega");
+  
+  }
+
+class MiClase
+{
+  public: static void mover(){
+      Serial.println("Llega a clase");
+    }
+}; 
+void (*funcptr)(void) = NULL;
+
+int value;
 int PINPIE1 = 2; 
 int PULSOMIN = 1300; //izquierdo
 int PULSOMAX = 2500; //izquierdo
 uint8_t comando = 90;
+MiClase vector[20];
 
 void setup() {
   // put your setup code here, to run once:
+  funcptr = MiClase::mover;
   pie1.attach(PINPIE1);
   Serial.begin(9600);
   miBT.begin(9600);
+  Serial.print("Listo");
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-
+  funcptr();
   if (miBT.available()) {   // if HM10 sends something then read
     comando = miBT.read();
     Serial.println(comando);
+    //vector[comando].mover();
+    Serial.println(value);
+    
   }
   /*
   pie1.write(comando);
