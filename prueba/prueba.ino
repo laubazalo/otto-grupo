@@ -1,5 +1,6 @@
 #include <SoftwareSerial.h>
 #include <Servo.h>
+#include "CaminarAdelante.h"
 
 //d0: RX
 //d1: TX
@@ -8,11 +9,6 @@
 Servo pie1; 
 SoftwareSerial miBT(10, 11);
 
-void prueba(){
-  Serial.println("Llega");
-  
-  }
-
 class MiClase
 {
   public: static void mover(){
@@ -20,17 +16,17 @@ class MiClase
     }
 }; 
 void (*funcptr)(void) = NULL;
+int vector[2] = {&Movimientos::caminarAdelante, &Movimientos::caminarAtras}; 
 
 int value;
 int PINPIE1 = 2; 
 int PULSOMIN = 1300; //izquierdo
 int PULSOMAX = 2500; //izquierdo
 uint8_t comando = 90;
-MiClase vector[20];
+
 
 void setup() {
   // put your setup code here, to run once:
-  funcptr = MiClase::mover;
   pie1.attach(PINPIE1);
   Serial.begin(9600);
   miBT.begin(9600);
@@ -39,7 +35,8 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  funcptr();
+  int value;
+  value = *funcptr[1]();
   if (miBT.available()) {   // if HM10 sends something then read
     comando = miBT.read();
     Serial.println(comando);
