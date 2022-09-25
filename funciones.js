@@ -51,8 +51,6 @@ document.getElementById('botonBluetooth').addEventListener('click', async event 
     await cliente.request();
     await cliente.connect();
     /* Do something with playbulbCandle... */
-    await cliente.writeColor(0)
-    await cliente.writeColor(90)
     await cliente.writeColor(180)
     cliente.disconnect();
   } catch(error) {
