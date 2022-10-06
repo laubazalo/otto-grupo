@@ -1,4 +1,4 @@
-//BLUETOOTH PARA ARDUNIO UNO. 
+
 
 #include <SoftwareSerial.h>   // Incluimos la librería  SoftwareSerial  
 SoftwareSerial BT(10,11);    // Definimos los pines RX y TX del Arduino conectados al Bluetooth
@@ -20,5 +20,6 @@ void loop()
   {
      BT.write(Serial.read());
   }
-  
+
+  Serial.println("ANDA JEFA");
 }
