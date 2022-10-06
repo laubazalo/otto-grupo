@@ -6,8 +6,10 @@
 //d1: TX
 //pie1: pin2
 //pierna Izq inicial: 90
-Servo pie1;
-Servo pie2; 
+Servo pieI;
+Servo pieD;
+Servo piernaI;
+Servo piernaD; 
 SoftwareSerial miBT(10, 11);
 
 class MiClase
@@ -28,8 +30,10 @@ int (*vector[20])(void) = {&Movimientos::caminarAdelante, &Movimientos::caminarA
                           &Movimientos::caminarAdelante8, &Movimientos::caminarAtras8,
                           &Movimientos::caminarAdelante9, &Movimientos::caminarAtras9}; 
 
-int PINPIE1 = 2;
-int PINPIE2 = 3; 
+int PINPIEI = 2;
+int PINPIED = 3;
+int PINPIERNAI = 4;
+int PINPIERNAD = 5; 
 int PULSOMIN = 1300; //izquierdo
 int PULSOMAX = 2500; //izquierdo
 uint8_t comando = 90;
@@ -37,8 +41,11 @@ uint8_t comando = 90;
 
 void setup() {
   // put your setup code here, to run once:
-  pie1.attach(PINPIE1);
-  pie2.attach(PINPIE2);
+  pieI.attach(PINPIEI);
+  pieD.attach(PINPIED);
+  piernaI.attach(PINPIERNAI);
+  piernaD.attach(PINPIERNAD);
+  
   Serial.begin(9600);
   miBT.begin(9600);
   Serial.print("Listo");
@@ -46,14 +53,13 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int value;;
+  int value;
 
   if (miBT.available()) {   // if HM10 sends something then read
     delay(1500);
     comando = miBT.read();
     Serial.println(comando);
     value = vector[comando]();
-    //vector[comando].mover();
     Serial.println(value);
     
   }
