@@ -1,0 +1,7 @@
+.pio
+CMakeListsPrivate.txt
+cmake-build-*/ 
+.idea/
+platformio.ini
+test/
+CMakeLists.txt
