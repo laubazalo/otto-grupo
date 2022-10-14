@@ -7,13 +7,16 @@
 
 
 
-TipoMovimiento::TipoMovimiento() {}
+TipoMovimiento::TipoMovimiento(RobotOtto otto) {
+    this->otto= &otto;
+}
 
 
 
 TipoMovimiento::~TipoMovimiento() {
 
 }
+
 
 
 

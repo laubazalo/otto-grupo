@@ -3,17 +3,11 @@
 //
 
 #include "FactoryBuilder.h"
+#include "CaminarAdelante.h"
 
 
- TipoMovimiento FactoryBuilder::caminarAdelante(){
-    //Pie izq anti horario
-    //Pierna izq
-    //Pie a 0
-    //Pierna a 0
-    //Volver a pos normal
-    //El otro lado seria lo opuesto
- //   return 20;
-
+TipoMovimiento FactoryBuilder::caminarAdelante(){
+    return *new CaminarAdelante(*robotOtto);
 }
 
  int FactoryBuilder::girarDerecha(){
@@ -121,3 +115,8 @@
     //value = "prueba";
     return 19;
 }
+
+void FactoryBuilder::initFactory() {
+    robotOtto=new RobotOtto();
+}
+

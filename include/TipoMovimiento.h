@@ -6,13 +6,15 @@
 #define ROBOTOTTO_TIPOMOVIMIENTO_H
 
 
+#include "RobotOtto.h"
+
 class TipoMovimiento {
-    RobotOtto otto;
+
+protected:
+   RobotOtto * otto;
 
 public:
-    TipoMovimiento();
-
-    TipoMovimiento(const RobotOtto & otto);
+    TipoMovimiento(RobotOtto otto);
 
 
     virtual void ejecutar();

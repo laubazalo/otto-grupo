@@ -10,9 +10,12 @@
 #include "TipoMovimiento.h"
 
 class FactoryBuilder {
+private:
+    static RobotOtto * robotOtto;
 
-public : RobotOtto*  otto = new RobotOtto();
 public:
+
+    static void initFactory();
     static TipoMovimiento caminarAdelante();
     static int girarDerecha();
     static int girarIzquierda();

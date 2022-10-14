@@ -12,7 +12,8 @@ class CaminarAdelante : public TipoMovimiento{
 
 
 public:
-    CaminarAdelante();
+     CaminarAdelante(RobotOtto otto);
+
     void ejecutar();
 };
 
