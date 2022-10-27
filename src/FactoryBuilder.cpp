@@ -3,120 +3,109 @@
 //
 
 #include "FactoryBuilder.h"
-#include "CaminarAdelante.h"
 
 
-TipoMovimiento FactoryBuilder::caminarAdelante(){
-    return *new CaminarAdelante(*robotOtto);
+void FactoryBuilder::caminarAdelante(){
+    
+    // Generar codigo aca 
+
 }
 
- int FactoryBuilder::girarDerecha(){
-    //std::String value;
-    //value = "prueba";
-    return 1; //GirarDerecha
+ void FactoryBuilder::girarDerecha(){
+    
+    
 }
 
- int FactoryBuilder::girarIzquierda(){
-    //std::String value;
-    //value = "prueba";
-    return 2;
+ void FactoryBuilder::girarIzquierda(){
+   
+    
+ }  
+
+
+ void FactoryBuilder::bend(){
+    
+    
+ }  
+
+ void FactoryBuilder::caminaLunar(){
+    
+ }
+    
+
+
+ void FactoryBuilder::crusaito(){
+    
+ }
+    
+
+ void FactoryBuilder::aleteo(){
+    
+    
+ }
+
+
+ void FactoryBuilder::swing(){
+
+    
+ } 
+
+ void FactoryBuilder::nervioso(){
+
+    
+ }
+
+ void FactoryBuilder::subirBajar(){
+ 
+    
+ }
+ void FactoryBuilder::feliz(){
+   
+    
+    
 }
 
- int FactoryBuilder::bend(){
-    //std::String value;
-    //value = "prueba";
-    return 3;
+ void FactoryBuilder::superFeliz(){
+   
+    
+    
 }
- int FactoryBuilder::caminaLunar(){
-    //std::String value;
-    //value = "prueba";
-    return 4;
-}
-
- int FactoryBuilder::crusaito(){
-    //std::String value;
-    //value = "prueba";
-    return 5;
-}
- int FactoryBuilder::aleteo(){
-    //std::String value;
-    //value = "prueba";
-    return 6;
+ void FactoryBuilder::triste(){
+  
+    
+    
 }
 
- int FactoryBuilder::swing(){
-    //std::String value;
-    //value = "prueba";
-    return 7;
+ void FactoryBuilder::victoria(){
+  
+    
+    
 }
- int FactoryBuilder::nervioso(){
-    //std::String value;
-    //value = "prueba";
-    return 8;
-}
-
- int FactoryBuilder::subirBajar(){
-    //std::String value;
-    //value = "prueba";
-    return 9;
-}
- int FactoryBuilder::feliz(){
-    //std::String value;
-    //value = "prueba";
-    return 10;
+ void FactoryBuilder::enojado(){
+  
+    
 }
 
- int FactoryBuilder::superFeliz(){
-    //std::String value;
-    //value = "prueba";
-    return 11;
+ void FactoryBuilder::dormido(){
+
+    
 }
- int FactoryBuilder::triste(){
-    //std::String value;
-    //value = "prueba";
-    return 12;
+ void FactoryBuilder::amor(){
+
+    
 }
 
- int FactoryBuilder::victoria(){
-    //std::String value;
-    //value = "prueba";
-    return 13;
+ void FactoryBuilder::confundido(){
+
+    
 }
- int FactoryBuilder::enojado(){
-    //std::String value;
-    //value = "prueba";
-    return 14;
+ void FactoryBuilder::fart(){
+   
+    
+    
 }
 
- int FactoryBuilder::dormido(){
-    //std::String value;
-    //value = "prueba";
-    return 15;
-}
- int FactoryBuilder::amor(){
-    //std::String value;
-    //value = "prueba";
-    return 16;
-}
+ void FactoryBuilder::caida(){
 
- int FactoryBuilder::confundido(){
-    //std::String value;
-    //value = "prueba";
-    return 17;
-}
- int FactoryBuilder::fart(){
-    //std::String value;
-    //value = "prueba";
-    return 18;
-}
-
- int FactoryBuilder::caida(){
-    //std::String value;
-    //value = "prueba";
-    return 19;
-}
-
-void FactoryBuilder::initFactory() {
-    robotOtto=new RobotOtto();
+    
 }
 

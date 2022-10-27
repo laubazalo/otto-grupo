@@ -11,31 +11,29 @@
 
 class FactoryBuilder {
 private:
-    static RobotOtto * robotOtto;
+     RobotOtto * robotOtto = new RobotOtto();
 
 public:
-
-    static void initFactory();
-    static TipoMovimiento caminarAdelante();
-    static int girarDerecha();
-    static int girarIzquierda();
-    static int bend();
-    static int caminaLunar();
-    static int crusaito();
-    static int aleteo();
-    static int swing();
-    static int nervioso();
-    static int subirBajar();
-    static int feliz();
-    static int superFeliz();
-    static int triste();
-    static int victoria();
-    static int enojado();
-    static int dormido();
-    static int amor();
-    static int confundido();
-    static int fart();
-    static int caida();
+    static void caminarAdelante();
+    static void girarDerecha();
+    static void girarIzquierda();
+    static void bend();
+    static void caminaLunar();
+    static void crusaito();
+    static void aleteo();
+    static void swing();
+    static void nervioso();
+    static void subirBajar();
+    static void feliz();
+    static void superFeliz();
+    static void triste();
+    static void victoria();
+    static void enojado();
+    static void dormido();
+    static void amor();
+    static void confundido();
+    static void fart();
+    static void caida();
 };
 
 
