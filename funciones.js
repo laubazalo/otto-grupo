@@ -51,9 +51,32 @@ document.getElementById('botonBluetooth').addEventListener('click', async event 
     await cliente.request();
     await cliente.connect();
     /* Do something with playbulbCandle... */
-    await cliente.writeColor(180)
-    cliente.disconnect();
   } catch(error) {
     console.log(error);
   }
 });
+
+
+document.getElementById('caminarAdelante').addEventListener('click', async event => {
+  try {
+    /* Do something with playbulbCandle... */
+    cliente.writeColor(0).then(res => console.log("Envie caminar adelante"))
+  } catch(error) {
+    console.log(error);
+  }
+});
+
+
+document.getElementById('botonBluetoothDisconnect').addEventListener('click', async event => {
+  try {
+    /* Do something with playbulbCandle... */
+    await cliente.disconnect();
+  } catch(error) {
+    console.log(error);
+  }
+});
+
+
+
+
+

@@ -12,7 +12,7 @@ if ('serviceWorker' in navigator) {
 /*Cuando hacemos un deploy en desarrollo, encontramos que el / no existe igual al de localhost. */
 if ( navigator.serviceWorker ) {
 
-    if ( url.includes('localhost') || url.includes('127.0.0.1') ) {
+    if ( url.includes('localhost') || url.includes('127.0.0.1')  || url.includes("laubazalo.github.io/otto-grupo" ) ){
         swLocation = './Service_Worker.js';
     }
 
