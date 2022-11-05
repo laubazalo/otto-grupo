@@ -1,4 +1,4 @@
-;
+
 const CACHE_NAME = 'RobotOtto', /*nombre de la aplicación que se almacena en la caché*/
 urlsToCache = [
     './',
