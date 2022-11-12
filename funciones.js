@@ -26,7 +26,7 @@ class ClienteBluetooth {
     await this.device.gatt.connect();
   }
   
-  async writeColor(data) {
+  async sendMovement(data) {
     const service = await this.device.gatt.getPrimaryService(0xFFE0);
     const characteristic = await service.getCharacteristic(0xFFE1);
     await characteristic.writeValue(Uint8Array.of(data));
@@ -59,9 +59,17 @@ document.getElementById('botonBluetooth').addEventListener('click', async event 
 
 function sendMessage(num){
   try{
-    cliente.writeColor(num).then(res => console.log("Envie caminar adelante"))
+    cliente.sendMovement(num).then(res => console.log("Envie caminar la funcion numero: ",num));
   }catch(error){
-    console.log(error)
+    console.log(error);
+  }
+}
+
+ function disconectBluetooth(){
+  try{
+     cliente.disconnect();
+  }catch(error){
+    console.log("Error al desconectar");
   }
 }
 
