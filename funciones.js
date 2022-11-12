@@ -64,9 +64,9 @@ function sendMessage(num){
   }
 }
 
- function disconectBluetooth(){
+ async function disconectBluetooth(){
   try{
-     cliente.disconnect();
+   await  cliente.disconnect();
   }catch(error){
     console.log("Error al desconectar");
   }
