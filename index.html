@@ -50,7 +50,7 @@
 
 <div class="barra">
     <button class="botonBT" id="botonBluetooth">Conectar Bluetooth</button><!--Cuando toca el botón corre la función run()-->
-    <button class="botonBT" id="botonBluetoothDisconnect">Desconectar Bluetooth</button><!--Cuando toca el botón corre la función run()-->
+    <button class="botonBT" id="botonBluetoothDisconnect" onclick=disconectBluetooth>Desconectar Bluetooth</button><!--Cuando toca el botón corre la función run()-->
 </div>
 </head>
 
@@ -80,14 +80,15 @@
             <button class="botonManejo" style="margin: 10px" onclick=sendMessage(11)>Feliz</button>
             <button class="botonManejo" style="margin: 10px" onclick=sendMessage(12)>Amor</button>
             <button class="botonManejo" style="margin: 10px" onclick=sendMessage(13)>Fart</button>
-            <button class="botonManejo" style="margin: 10px" onclick=sendMessage(14)>Fail</button>
+            <button class="botonManejo" style="margin: 10px" onclick=sendMessage(14)>Arriba-Abajo</button>
+            
         </div>
         <div id="columna2" class="box">
-            <button class="botonManejo" style="margin: 10px">Super Feliz</button>
-            <button class="botonManejo" style="margin: 10px">Dormido</button>
-            <button class="botonManejo" style="margin: 10px">Victorioso</button>
-            <button class="botonManejo" style="margin: 10px">Triste</button>
-            <button class="botonManejo" style="margin: 10px">Enojado</button>
+            <button class="botonManejo" style="margin: 10px" onclick=sendMessage(15)>Triste</button>
+            <button class="botonManejo" style="margin: 10px" onclick=sendMessage(16)>Enojado</button>
+            <button class="botonManejo" style="margin: 10px" onclick=sendMessage(17)>Dormido</button>
+            <button class="botonManejo" style="margin: 10px" onclick=sendMessage(18)>Super Feliz</button>
+            <button class="botonManejo" style="margin: 10px" onclick=sendMessage(19)>Fail</button>
         </div>
         </div>
     </div>
