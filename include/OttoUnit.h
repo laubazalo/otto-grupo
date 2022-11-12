@@ -5,12 +5,12 @@
 
 class OttoUnit : public Otto{
 	public:
-		void (*functionOtto[15])(uint8_t) = {
+		void (*functionOtto[20])(uint8_t) = {
 			walkFordward, walkBackground, turnLeft,
 			turnRigth, swing, shakeLeg, moonWalker,
 			crusaito, flapping,
 			tiptoeSwing, jitter, happy, love,
-			fart, end
+			fart,upDown,sad,angry,sleeping,superHappy,end
 			};
 		
 		void executeRemote(uint8_t velocidad, uint8_t funcionalidad);
@@ -32,4 +32,9 @@ class OttoUnit : public Otto{
 		static void love(uint8_t velocidad);
 		static void fart(uint8_t velocidad);
 		static void end(uint8_t velocidad);		
+		static void sad(uint8_t velocidad);
+		static void angry(uint8_t velocidad);
+		static void sleeping(uint8_t velocidad);
+		static void superHappy(uint8_t velocidad);
+		static void upDown(uint8_t velocidad);
 };

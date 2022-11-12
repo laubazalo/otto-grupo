@@ -1,6 +1,6 @@
 #include <OttoUnit.h>
 #include <Property.h>
-#include <../lib/Servo/Servo.h>
+#include <Servo.h>
 #include <EnumStateBody.h>
 
 struct position_t{
@@ -48,11 +48,13 @@ void OttoUnit::walkFordward(uint8_t velocidad){
 	Otto::moveFoots(0, velocidad);
 	Otto::moveLegs(1, velocidad);
 	Otto::moveFoots(1, velocidad);
+	Otto::returnPosInit();
+	
 };
 
 void OttoUnit::walkBackground(uint8_t velocidad){
 	Serial.println("walkBackground");
-	Otto:firstStep(0, velocidad); // 0 ADELANTE - 1 ATRAS
+	Otto::firstStep(0, velocidad); // 0 ADELANTE - 1 ATRAS
 	Otto::moveFoots(1, velocidad);
 	Otto::moveLegs(1, velocidad);
 	Otto::moveFoots(0, velocidad);
@@ -104,7 +106,7 @@ void OttoUnit::turnRigth(uint8_t velocidad){
 		pos->legLeft = pos->legLeft - 1;
 		legLeft_servo.write(pos->legLeft);
 		footLeft_servo.write(pos->footLeft);
-		delay(velocidad);
+		delay(15);
 	}
 	
 	for(uint8_t i=0; i<30; i++){
@@ -112,7 +114,7 @@ void OttoUnit::turnRigth(uint8_t velocidad){
 		pos->footRight = pos->footRight - 1;
 		footRight_servo.write(pos->footRight);
 		footLeft_servo.write(pos->footLeft);
-		delay(velocidad);
+		delay(15);
 	}
 	
 	for(uint8_t i=0; i<30; i++){
@@ -120,19 +122,19 @@ void OttoUnit::turnRigth(uint8_t velocidad){
 		pos->footRight = pos->footRight + 1;
 		legLeft_servo.write(pos->legLeft);
 		footRight_servo.write(pos->footRight);
-		delay(velocidad);
+		delay(15);
 	}
 	
 	for(uint8_t i=0; i<30; i++){
 		pos->footLeft = pos->footLeft + 1;
 		footLeft_servo.write(pos->footLeft);
-		delay(velocidad);
+		delay(15);
 	}
 	
 	for(uint8_t i=0; i<30; i++){
 		pos->legLeft = pos->legLeft - 2;
 		legLeft_servo.write(pos->legLeft);
-		delay(velocidad);
+		delay(15);
 	}
 };
 
@@ -191,7 +193,7 @@ void OttoUnit::shakeLeg(uint8_t velocidad){
 	for(uint8_t i=0; i<30; i++){
 		pos->footLeft = pos->footLeft - 1;
 		footLeft_servo.write(pos->footLeft);
-		delay(velocidad);
+		delay(10);
 	}
 	
 	for(uint8_t i=0; i<30; i++){
@@ -201,7 +203,7 @@ void OttoUnit::shakeLeg(uint8_t velocidad){
 			pos->footLeft = pos->footLeft + 1;
 		}
 			footLeft_servo.write(pos->footLeft);
-			delay(velocidad);
+			delay(10);
 	}
 };
 
@@ -212,25 +214,25 @@ void OttoUnit::moonWalker(uint8_t velocidad){
 	for(uint8_t i=0; i<30; i++){
 		pos->footRight = pos->footRight - 1;
 		footRight_servo.write(pos->footRight);
-		delay(velocidad);
+		delay(10);
 	}
 	
 	for(uint8_t i=0; i<30; i++){
 		pos->footLeft = pos->footLeft + 1;
 		footLeft_servo.write(pos->footLeft);
-		delay(velocidad);
+		delay(10);
 	}
 	
 	for(uint8_t i=0; i<30; i++){
 		pos->footRight = pos->footRight + 1;
 		footRight_servo.write(pos->footRight);
-		delay(velocidad);
+		delay(10);
 	}
 	
 	for(uint8_t i=0; i<30; i++){
 		pos->footLeft = pos->footLeft - 1;
 		footLeft_servo.write(pos->footLeft);
-		delay(velocidad);
+		delay(10);
 	}
 };
 
@@ -289,7 +291,7 @@ void OttoUnit::tiptoeSwing(uint8_t velocidad){
 		delay(velocidad);
 	}
 	
-	for(uint8_t i=0; i<30; i++){
+	for(uint8_t i=0; i<60; i++){
 		pos->legLeft = pos->legLeft - 1;
 		pos->legRight = pos->legRight + 1;
 		legLeft_servo.write(pos->legLeft);
@@ -428,6 +430,104 @@ void OttoUnit::end(uint8_t velocidad){
 	}
 };
 
+void OttoUnit::sad(uint8_t velocidad){
+	position_t *pos = reinterpret_cast<position_t *>(extremities);
+	Serial.println("Sad");
+
+	for(uint8_t i=0; i<60;i++){
+		pos->footLeft = pos->footLeft -1;
+		pos->footRight = pos->footRight+1;
+		footLeft_servo.write(pos->footLeft);
+		delay(15);
+		footRight_servo.write(pos->footRight);
+	}
+	delay(500);
+}
+
+void OttoUnit::angry(uint8_t velocidad){
+	position_t *pos = reinterpret_cast<position_t *>(extremities);
+	Serial.println("Angry");
+
+	for(uint8_t i=0; i<60;i++){
+		pos->legLeft = pos->legLeft + 1;
+		pos->legRight = pos->legRight+1;
+		legLeft_servo.write(pos->legLeft);
+		delay(15);
+		legRight_servo.write(pos->legRight);
+	}
+	delay(500);
+	returnPosInit();
+}
+void OttoUnit::sleeping(uint8_t velocidad){
+	position_t *pos = reinterpret_cast<position_t *>(extremities);
+	Serial.println("Sleeping");
+
+	for(uint8_t i=0; i<20;i++){
+		pos->footRight = pos->footRight+1;
+		footRight_servo.write(pos->footRight);
+		delay(15);
+	}
+	delay(500);
+	returnPosInit();
+}
+
+void OttoUnit::superHappy(uint8_t velocidad){
+	Serial.println("Super Happy");
+
+	position_t *pos = reinterpret_cast<position_t *>(extremities);
+	
+	for(uint8_t i=0; i<50; i++){
+		pos->footLeft = pos->footLeft + 1;
+		pos->footRight = pos->footRight - 1;
+		footLeft_servo.write(pos->footLeft);
+		footRight_servo.write(pos->footRight);
+		delay(10);
+	}
+	
+	//Sube y baja
+	for(uint8_t i=0; i<15; i++){
+		pos->footLeft = pos->footLeft + 1;
+		pos->footRight = pos->footRight - 1;
+		footLeft_servo.write(pos->footLeft);
+		footRight_servo.write(pos->footRight);
+		delay(5);
+	}
+	
+	for(uint8_t i=0; i<50; i++){
+		pos->footLeft = pos->footLeft - 1;
+		pos->footRight = pos->footRight + 1;
+		footLeft_servo.write(pos->footLeft);
+		footRight_servo.write(pos->footRight);
+		delay(10);
+	}
+	
+	for(uint8_t i=0; i<50; i++){
+		pos->footLeft = pos->footLeft + 1;
+		pos->footRight = pos->footRight - 1;
+		footLeft_servo.write(pos->footLeft);
+		footRight_servo.write(pos->footRight);
+		delay(10);
+	}
+	returnPosInit();
+
+}
+
+void OttoUnit::upDown(uint8_t velocidad ){
+	position_t *pos = reinterpret_cast<position_t *>(extremities);
+	Serial.println("Up down");
+	for(uint8_t i =0; i <60 ; i++){
+		pos-> footLeft = pos->footLeft +1;
+		pos-> footRight = pos->footRight -1;
+		footLeft_servo.write(pos->footLeft);
+		footRight_servo.write(pos->footRight);
+		delay(10);
+	}
+}
+
+
+
 void OttoUnit::executeRemote(uint8_t velocidad, uint8_t funcionalidad){
 	functionOtto[funcionalidad](velocidad);
 };
+
+

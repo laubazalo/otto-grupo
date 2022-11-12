@@ -1,6 +1,5 @@
-#include <Property.h>
 #include <Otto.h>
-#include <EnumStateBody.h>
+#include <Servo.h>
 
 uint8_t Otto::extremities[4];
 uint8_t Otto::extremitiesPosInit[4];
@@ -21,6 +20,7 @@ struct position_t{
 
 void Otto::init(){
 	//Configuracion de transistores para alimentación de motores
+	
 	initServomotores();
 	initPosition();
 };
@@ -64,7 +64,7 @@ void Otto::initPosition(){
 				pos->legLeft = pos->legLeft + 1;
 			}else{ //Primer paso CAMINAR ATRAS
 				pos->legRight = pos->legRight - 1;
-				pos->legRight = pos->legRight - 1;
+				pos->footRight = pos->footRight - 1;
 				pos->legLeft = pos->legLeft - 1;
 			}
 			
@@ -127,10 +127,10 @@ void Otto::initPosition(){
 						legLeft_servo.write(extremities[i]);
 						break;
 					case 3:
-						legLeft_servo.write(extremities[i]);
+						legRight_servo.write(extremities[i]);
 						break;
 					default:
-						Serial.println("No se está seleccionando el moto correcto");
+						Serial.println("No se está seleccionando el motor correcto");
 						break;
 				}
 				delay(15);

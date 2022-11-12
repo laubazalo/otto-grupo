@@ -1,14 +1,25 @@
 #include <Arduino.h>
 #include <OttoUnit.h>
+#include <SoftwareSerial.h>
+#include <Property.h>
+#include <Servo.h>
 
-OttoUnit otto;
+
+
+OttoUnit ottoUnit;
+SoftwareSerial miBT(10,11);
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  otto.executeRemote(2000,0); // velocidad =5 ; walkforward
+  ottoUnit.init();
+  miBT.begin(9600);
 }
-
+int comando=0;
 void loop() {
-  // put your main code here, to run repeatedly:
+    ottoUnit.returnPosInit();
+    if(miBT.available()){
+     comando=miBT.read();
+     ottoUnit.executeRemote(30, comando); // camina adelante
+    }
 }

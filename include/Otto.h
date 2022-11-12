@@ -1,6 +1,8 @@
 #pragma once
 #include <Arduino.h>
-#include <../lib/Servo/Servo.h>
+#include <Servo.h>
+#include <EnumStateBody.h>
+#include <Property.h>
 
 //#include <OttoTransistor.h>
 
@@ -16,7 +18,6 @@ class Otto{
 	protected:
 		static uint8_t extremities[4];
 		static uint8_t extremitiesPosInit[4];
-		//static OttoTransistor ottoTransistor;
 		static Servo legRight_servo;
 		static Servo legLeft_servo;
 		static Servo footRight_servo;
