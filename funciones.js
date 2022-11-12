@@ -56,7 +56,6 @@ document.getElementById('botonBluetooth').addEventListener('click', async event 
   }
 });
 
-
 function sendMessage(num){
   try{
     cliente.sendMovement(num).then(res => console.log("Envie caminar la funcion numero: ",num));
