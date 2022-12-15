@@ -1,4 +1,4 @@
-#include <Otto.h>
+#include "Otto.h"
 #include <Servo.h>
 
 uint8_t Otto::extremities[4];
@@ -10,7 +10,7 @@ Servo Otto::legLeft_servo;
 Servo Otto::footRight_servo;
 Servo Otto::footLeft_servo;
 
-struct position_t{
+struct position{
 	//No incluye al caracter 0
 	uint8_t footLeft; //Pie izquierdo
 	uint8_t footRight; //Pie derecho
@@ -34,8 +34,8 @@ void Otto::initServomotores(){
 }
 
 void Otto::initPosition(){
-	position_t *pos = reinterpret_cast<position_t *>(extremities);
-	position_t *posInit = reinterpret_cast<position_t *>(extremitiesPosInit);
+	position *pos = reinterpret_cast<position *>(extremities);
+	position *posInit = reinterpret_cast<position *>(extremitiesPosInit);
 	
 	pos->footLeft = POS_INIT - 8;
 	pos->footRight = POS_INIT - 7;
@@ -54,7 +54,7 @@ void Otto::initPosition(){
 }
 	//movDir suma 1 mandando 0
 	void Otto::firstStep(uint8_t movDir, uint8_t movGrados){
-		position_t *pos = reinterpret_cast<position_t *>(extremities);
+		position *pos = reinterpret_cast<position *>(extremities);
 		
 		//Primer paso - CAMINAR ADELANTE
 		for (uint8_t i=0; i<movGrados; i++){
@@ -76,7 +76,7 @@ void Otto::initPosition(){
 	};
 	
 	void Otto::moveLegs(uint8_t movDir, uint8_t movGrados){
-		position_t *pos = reinterpret_cast<position_t *>(extremities);
+		position *pos = reinterpret_cast<position *>(extremities);
 		
 		for (uint8_t i=0; i<movGrados; i++){
 			if (movDir){ //1
@@ -93,7 +93,7 @@ void Otto::initPosition(){
 	};
 	
 	void Otto::moveFoots(uint8_t movDir, uint8_t movGrados){
-		position_t *pos = reinterpret_cast<position_t *>(extremities);
+		position *pos = reinterpret_cast<position *>(extremities);
 		for (uint8_t i=0; i<movGrados; i++){
 			if(movDir){
 				pos->footRight = pos->footRight + 1;

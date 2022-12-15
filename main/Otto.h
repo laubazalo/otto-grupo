@@ -1,8 +1,8 @@
 #pragma once
 #include <Arduino.h>
 #include <Servo.h>
-#include <EnumStateBody.h>
-#include <Property.h>
+#include "EnumStateBody.h"
+#include "Property.h"
 
 //#include <OttoTransistor.h>
 
